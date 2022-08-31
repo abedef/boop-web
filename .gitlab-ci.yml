@@ -7,3 +7,4 @@ deploy-proxmox:
     - find . -delete
     - popd
     - cp -r . /srv/boop
+    - sudo /usr/bin/systemctl restart boop
