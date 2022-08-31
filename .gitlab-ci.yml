@@ -1,6 +1,28 @@
-deploy-proxmox:
+deploy-proxmox-abed:
   tags:
-    - boop
+    - ichi
+  stage: deploy
+  script:
+    - pushd /srv/boop
+    - find . -delete
+    - popd
+    - cp -r . /srv/boop
+    - sudo /usr/bin/systemctl restart boop
+
+deploy-proxmox-raed:
+  tags:
+    - ni
+  stage: deploy
+  script:
+    - pushd /srv/boop
+    - find . -delete
+    - popd
+    - cp -r . /srv/boop
+    - sudo /usr/bin/systemctl restart boop
+
+deploy-proxmox-elena:
+  tags:
+    - san
   stage: deploy
   script:
     - pushd /srv/boop
