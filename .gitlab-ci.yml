@@ -1,11 +1,4 @@
----
-run-go:
-  stage: build
-  script:
-    - npm install
-    - npm run build
-
-copy-files:
+deploy-proxmox:
   tags:
     - boop
   stage: deploy
@@ -14,3 +7,6 @@ copy-files:
     - find . -delete
     - popd
     - cp -r . /srv/boop
+    - pushd /srv/boop
+    - npm install
+    - npm run build
