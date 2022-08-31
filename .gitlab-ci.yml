@@ -6,6 +6,8 @@ run-go:
     - npm run build
 
 copy-files:
+  tags:
+    - ichi
   stage: deploy
   script:
     - rm -rf /srv/boop
