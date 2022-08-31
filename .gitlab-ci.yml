@@ -7,6 +7,3 @@ deploy-proxmox:
     - find . -delete
     - popd
     - cp -r . /srv/boop
-    - pushd /srv/boop
-    - npm install
-    - npm run build
