@@ -10,5 +10,7 @@ copy-files:
     - boop
   stage: deploy
   script:
-    - find /srv/boop -delete
+    - pushd /srv/boop
+    - find . -delete
+    - popd
     - cp -r . /srv/boop
