@@ -4,3 +4,9 @@ run-go:
   script:
     - npm install
     - npm run build
+
+copy-files:
+  stage: deploy
+  script:
+    - rm -rf /srv/boop
+    - cp -r . /srv/boop
