@@ -7,7 +7,7 @@ run-go:
 
 copy-files:
   tags:
-    - ichi
+    - boop
   stage: deploy
   script:
     - rm -rf /srv/boop
