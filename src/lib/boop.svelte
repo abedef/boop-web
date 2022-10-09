@@ -54,6 +54,10 @@
                 '<span style="color: red; font-weight: bold;">$1$3</span>'
             )
             .replace(
+                /@(\d+\b)/g,
+                '<a href="/@$1" style="color: #00FF00; font-weight: bold; text-decoration: none;">@$1</a>'
+            )
+            .replace(
                 /(todo|doing|done)/i,
                 '<span style="color: #FFB000; font-weight: bold;">$1</span>'
             )

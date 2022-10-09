@@ -12,7 +12,7 @@
 
 <!-- TODO: Note here I key over the text because keying over the id is not
 sufficient because when you make edits this won't be triggered to re render -->
-{#each mappedItems as item, i (item.text)}
+{#each mappedItems as item, i (item.id + item.text)}
     {#if i == 0 || mappedItems[i - 1].date != item.date}
         <h2 class="unselectable">{item.date}</h2>
     {/if}

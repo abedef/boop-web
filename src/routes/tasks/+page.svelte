@@ -11,7 +11,7 @@
     $: mappedItems = data.items.map(itemMapper);
 </script>
 
-{#each mappedItems as item, i (item.text)}
+{#each mappedItems as item, i (item.id + item.text)}
     {#if i == 0 || mappedItems[i - 1].date != item.date}
         <h2 class="unselectable">{item.date}</h2>
     {/if}

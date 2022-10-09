@@ -33,7 +33,7 @@
     </div>
 </div>
 
-{#if $page.url.pathname !== "/" && $page.url.pathname !== "/tasks" && $page.url.pathname !== "/events" && $page.url.pathname !== "/beans"}
+{#if $page.url.pathname !== "/" && $page.url.pathname !== "/tasks" && $page.url.pathname !== "/events" && $page.url.pathname !== "/beans" && !$page.url.pathname.startsWith("/@")}
     <h2>
         <a href="/">
             {$page.url.pathname}
